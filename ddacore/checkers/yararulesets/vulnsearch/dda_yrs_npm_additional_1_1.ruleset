@@ -1,0 +1,10 @@
+rule dda_yrs_npm_additional_1_1 {
+meta:
+        description = "  "
+        dda_score = "   "
+strings:
+        $pat_1 = /"[\w\W]*?http[\w\W]*?"/
+        $pat_2 = /'[\w\W]*?http[\w\W]*?'/
+condition:
+        ($pat_1 or $pat_2)
+}
